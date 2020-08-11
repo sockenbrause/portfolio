@@ -1,0 +1,945 @@
+*{
+  padding: 0;
+  margin:0;
+}
+.cbcontainer{z-index: 1;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  position: relative;
+    width: 100vw;
+    height: 100vh;
+  /* background-image: url("../assets/curve4.png");*/
+    background-size: 100%;
+
+    background-image: linear-gradient(rgb(0, 32, 27), rgb(0, 62, 39),rgb(0, 113, 82),rgb(0, 113, 82)
+    ,rgb(0, 113, 82),rgb(0, 131, 57));
+}
+
+.picInMiddle{
+  text-align: center;
+  color: white;
+  position: absolute;
+  z-index:5;
+  width:35vw;
+  height:45vh;
+  top:25vh;
+  right: 32.5vw;
+/* 
+  border-style: solid;
+border-radius: 30%;
+background-image: radial-gradient(blue, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+background-image: linear-gradient(rgb(0, 0, 0), rgb(18, 36, 29), rgb(0, 62, 39));
+ background-color: azure;
+ outline: thick ridge grey;
+outline-offset: 5px; */
+
+}
+
+.picInMiddle h1{
+  margin-top:8vh;
+  font-size: 3vw;
+  text-shadow: 0px 160px 40px rgba(0, 0, 0, 0.753);
+}
+
+/*moving divs section here*/
+
+.move1{
+  
+/*position data*/
+z-index: 10;
+position: absolute;
+width: 15vw;
+height: 45vh;
+
+/*animation*/    
+    animation-name: slideLeft;
+     animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+   animation-fill-mode: both;
+   animation-play-state: paused;}
+
+.move1 div:first-child{
+  /*the look*/
+ bottom: 50vh;
+  padding: 40px;
+  height: 40vh;
+  color: rgb(155, 155, 155);
+ /* text-shadow: -1px 2px red;*/
+ text-shadow:0px -1px 1px rgb(233, 233, 233), 0px 1px 1px rgb(56, 56, 56) ;
+  text-align: center;
+  font-size: 1.3vw;
+  border: 0px solid red;
+/* border-radius: 10px;*/
+ outline: thick ridge grey;
+outline-offset: 3px;   
+/*background-color: rgb(255, 230, 0);*/
+background-image: linear-gradient(rgb(0, 0, 0), rgb(18, 36, 29), rgb(0, 62, 39));
+}
+.move2{
+/*position data*/
+z-index: 3;
+position: absolute;
+width: 15vw;
+height: 45vh;
+
+/*animation*/    
+    animation-name: slideLeft1;
+     animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+   animation-fill-mode: both;
+   animation-play-state: paused;}
+   
+   .move2 div:first-child{
+  /*the look*/
+  padding: 40px;
+height: 40vh;
+  color: rgb(155, 155, 155);
+ text-shadow:0px -1px 1px rgb(233, 233, 233), 0px 1px 1px rgb(56, 56, 56) ;
+  text-align: center;
+  font-size: 1.3vw;
+  border: 0px solid red;
+ outline: thick ridge grey;
+outline-offset: 3px;   
+background-image: linear-gradient(rgb(0, 0, 0), rgb(18, 36, 29), rgb(0, 62, 39));
+}
+
+.move3{
+  
+  /*position data*/
+z-index: 3;
+position: absolute;
+width: 15vw;
+height: 45vh;
+
+/*animation*/    
+    animation-name: slideLeft2;
+     animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+   animation-fill-mode: both;
+   animation-play-state: paused;
+}
+
+a{   text-decoration: none;} 
+
+.move3 div:first-child{
+   /*the look*/
+   padding: 40px;
+   height: 40vh;
+   color: rgb(155, 155, 155);
+   text-shadow:0px -1px 1px rgb(233, 233, 233), 0px 1px 1px rgb(56, 56, 56) ;
+    text-align: center;
+ 
+  font-size: 1.3vw;
+   border: 0px solid red;
+  outline: thick ridge grey;
+outline-offset: 3px;   
+background-image: linear-gradient(rgb(0, 0, 0), rgb(18, 36, 29), rgb(0, 62, 39));
+}
+
+.shadowbox{/*z-index: 3;*/
+ text-align: center;
+ font-size:.8vw;
+pointer-events: none;
+bottom: 30vh;
+height: 5vh;
+/*background-color: blue;*/
+/*box-shadow: 0px 30px 30px rgb(0, 0, 0);*/
+color: rgba(0, 0, 255, 0);
+text-shadow: 0px 30px 20px rgb(0, 0, 0);
+text-shadow: 0px 30px 35px rgb(0, 0, 0);
+text-shadow: 0px 30px 40px rgb(0, 0, 0);
+text-shadow: 0px 30px 45px rgb(0, 0, 0);
+
+}
+
+/*this starts the animation*/
+.directionL:hover~.move1{ 
+ animation-play-state: running;
+}
+.directionL:hover~.move2{ 
+  animation-play-state: running;
+ }
+ .directionL:hover~.move3{ 
+  animation-play-state: running;
+ }
+
+/*this div works as a controlbutton (hover over key)*/
+.directionL{ 
+    position: absolute;
+    bottom: 10vh;
+    left: 46vw;
+    
+    width: 10vw;
+    height: 10vh;
+    background-image: url("../assets/arrow1a.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+   
+
+           
+
+
+@keyframes slideLeft{
+  /*right up*/
+  0% {right: 42.5vw;
+      top: 29.3vh;
+      transform: scale(1);
+      z-index: 10;
+  }
+  2.04% {right: 45.5vw;
+    top: 29.3vh;
+   transform: scale(1);
+   }
+4.08% {right: 48.7vw;
+  top: 29.1vh;
+  transform: scale(.99);
+}
+6.12% {right: 51.8vw;
+  top: 28.9vh;
+  transform: scale(.99);
+}
+8.16% {right: 55.1vw;
+  top: 28.6vh;
+  transform: scale(.98);
+}
+  10.2% {right: 58.4vw;
+  
+    top: 28.1vh;
+    transform: scale(.98);
+}
+  12.24%{right: 61.8vw;
+    top: 27.4vh;
+    transform: scale(.97);
+  }
+  14.28% {right: 65.1vw;
+    top: 26.7vh;
+    transform: scale(.96);
+}
+16.32% {right: 68.1vw;
+  top: 25.5vh;
+  transform: scale(.94);
+}
+
+     18.36% {right: 70.6vw;
+    top: 24.1vh;
+    transform: scale(.9);
+    }
+
+ 20.4% {right: 72.1vw;
+      top: 22.4vh;
+      transform: scale(.86);
+      z-index: 10;
+    /*  background-color: aquamarine;*/
+  }
+  
+  22.44% {right: 72.3vw;
+    top:20.7vh;
+    transform: scale(.84);
+    z-index:3;
+}
+24.48% {right: 71.7vw;
+  top: 18.9vh;/*2.6*/
+  transform: scale(.83);
+}
+26.52% {right: 70.2vw;
+  top:17.3vh ;/*1.9*/
+  transform: scale(.82);
+}
+28.56% {right: 68vw;
+  top: 15.9vh;/*1.5*/
+  transform: scale(.82);
+}
+  30.6% {right: 65.3vw;
+  
+    top: 14.7vh;/*2*/
+    transform: scale(.81);
+}
+  32.64%{right: 62.2vw;
+    top: 13.8vh;/*1.8*/
+    transform: scale(.81);
+  }
+  34.68% {right: 59.3vw;
+    top: 13.1vh;/*1.6*/
+    transform: scale(.80);
+}
+36.72% {right: 56.4vw;
+  top: 12.8vh;/*1.5*/
+  transform: scale(.80);
+}
+38.76% {right: 53.8vw;
+  top: 12.4vh;
+  transform: scale(.80);
+}
+40.8%{right: 51.2vw;
+  top: 12.2vh;
+  transform: scale(.81);
+} 
+42.84% {right: 49vw;
+  
+  top: 12.1vh;
+  transform: scale(.81);
+}
+44.88% {right: 46.7vw;
+  top: 12vh;
+  transform: scale(.82);
+}
+46.92% {right: 44.6vw;
+  top: 11.8vh;
+  transform: scale(.82);
+}
+
+48.96% {right: 42.5vw;
+  top: 11.8vh;
+  transform: scale(.83);
+}
+51% {right: 40.4vw;
+  top: 11.8vh;
+  transform: scale(.83);
+}
+53.04% {right: 38.3vw;
+  top: 11.8vh;
+  transform: scale(.82);
+}
+55.08% {right: 36vw;
+  top: 12vh;
+  transform: scale(.82);
+}
+57.12% {right: 33.8vw;
+  
+  top: 12.1vh;
+  transform: scale(.81);
+}
+59.16%{right: 31.2vw;
+  top: 12.2vh;
+  transform: scale(.81);
+} 
+61.2% {right: 28.6vw;
+  top: 12.4vh;
+  transform: scale(.80);
+ /* z-index:3;*/
+}
+63.24% {right: 25.7vw;
+  top: 12.8vh;/*1.5*/
+  transform: scale(.80);
+ /* z-index: 10;*/
+}
+65.28% {right: 22.8vw;
+  top: 13.1vh;/*1.6*/
+  transform: scale(.80);
+}
+67.32%{right: 19.7vw;
+  top: 13.8vh;/*1.8*/
+  transform: scale(.81);
+  z-index: 3;
+}
+69.36% {right: 17vw;
+  
+  top: 14.7vh;/*2*/
+  transform: scale(.81);
+  z-index: 10;
+}
+71.4% {right: 14.8vw;
+  top: 15.9vh;/*1.5*/
+  transform: scale(.82);
+}
+73.44% {right: 13.3vw;
+  top:17.3vh ;/*1.9*/
+  transform: scale(.82);
+}
+75.48% {right: 12.7vw;
+  top: 18.9vh;/*2.6*/
+  transform: scale(.83);
+}
+77.52% {right: 12.9vw;
+  top:20.7vh;
+  transform: scale(.84);
+  z-index:10;
+}
+79.56% {right: 14.4vw;
+  top: 22.4vh;
+  transform: scale(.86);
+ /* background-color: aquamarine;*/
+}
+
+81.6% {right: 16.9vw;
+  top: 24.1vh;
+  transform: scale(.9);
+  }
+  83.64% {right: 19.9vw;
+    top: 25.5vh;
+    transform: scale(.94);
+  }
+  85.68% {right: 23.2vw;
+    top: 26.7vh;
+    transform: scale(.96);
+}
+87.72%{right: 26.6vw;
+  top: 27.4vh;
+  transform: scale(.97);
+}
+89.76% {right: 29.9vw;
+  
+  top: 28.1vh;
+  transform: scale(.98);
+}
+91.8% {right: 33.2vw;
+  top: 28.6vh;
+  transform: scale(.98);
+}
+93.84% {right: 36.3vw;
+  top: 28.9vh;
+  transform: scale(.99);
+}
+95.88% {right: 39.5vw;
+  top: 29.1vh;
+  transform: scale(.99);
+}
+97.92% {right: 41.5vw;
+  top: 29.3vh;
+  transform: scale(1);
+}
+100% {right: 42.5vw;
+  top: 29.3vh;
+  transform: scale(1);
+}
+
+}
+
+@keyframes slideLeft1{
+  0% {right: 17vw;
+
+    top: 14.7vh;/*2*/
+    transform: scale(.81);
+    }
+    2.04% {right: 14.8vw;
+    top: 15.9vh;/*1.5*/
+    transform: scale(.82);
+    }
+    4.08% {right: 13.3vw;
+    top:17.3vh ;/*1.9*/
+    transform: scale(.82);
+    }
+    6.12% {right: 12.7vw;
+    top: 18.9vh;/*2.6*/
+    transform: scale(.83);
+    }
+    8.16% {right: 12.9vw;
+    top:20.7vh;
+    transform: scale(.84);
+    z-index:10;
+    }
+    10.2% {right: 14.4vw;
+    top: 22.4vh;
+    transform: scale(.86);
+   /* background-color: aquamarine;*/
+    }
+    
+    12.24% {right: 16.9vw;
+    top: 24.1vh;
+    transform: scale(.9);
+    }
+    14.28% {right: 19.9vw;
+      top: 25.5vh;
+      transform: scale(.94);
+    }
+    16.32% {right: 23.2vw;
+      top: 26.7vh;
+      transform: scale(.96);
+    }
+    18.36%{right: 26.6vw;
+    top: 27.4vh;
+    transform: scale(.97);
+    }
+    20.4% {right: 29.9vw;
+    
+    top: 28.1vh;
+    transform: scale(.98);
+    }
+    22.44% {right: 33.2vw;
+    top: 28.6vh;
+    transform: scale(.98);
+    }
+    24.48% {right: 36.3vw;
+    top: 28.9vh;
+    transform: scale(.99);
+    }
+    26.52% {right: 39.5vw;
+    top: 29.1vh;
+    transform: scale(.99);
+    }
+    28.56% {right: 41.5vw;
+    top: 29.3vh;
+    transform: scale(1);
+    }
+    30.6% {right: 42.5vw;
+    top: 29.3vh;
+    transform: scale(1);
+    }
+    /*animation split*/
+  32.64% {right: 44vw;
+    top: 29.3vh;
+    transform: scale(1);
+    z-index: 10;
+}
+34.68% {right: 45.5vw;
+  top: 29.3vh;
+  transform: scale(1);
+}
+36.72% {right: 48.7vw;
+top: 29.1vh;
+transform: scale(.99);
+}
+38.76% {right: 51.8vw;
+top: 28.9vh;
+transform: scale(.99);
+}
+40.8% {right: 55.1vw;
+top: 28.6vh;
+transform: scale(.98);
+}
+42.84% {right: 58.4vw;
+
+  top: 28.1vh;
+  transform: scale(.98);
+}
+44.88%{right: 61.8vw;
+  top: 27.4vh;
+  transform: scale(.97);
+}
+46.92% {right: 65.1vw;
+  top: 26.7vh;
+  transform: scale(.96);
+}
+48.96% {right: 68.1vw;
+top: 25.5vh;
+transform: scale(.94);
+}
+
+  51% {right: 70.6vw;
+  top: 24.1vh;
+  transform: scale(.9);
+  }
+
+53.04% {right: 72.1vw;
+    top: 22.4vh;
+    transform: scale(.86);
+  /*  background-color: aquamarine;*/
+}
+
+55.08% {right: 72.3vw;
+  top:20.7vh;
+  transform: scale(.84);
+  z-index:3;
+}
+57.12% {right: 71.7vw;
+top: 18.9vh;/*2.6*/
+transform: scale(.83);
+}
+59.16% {right: 70.2vw;
+top:17.3vh ;/*1.9*/
+transform: scale(.82);
+}
+61.2% {right: 68vw;
+top: 15.9vh;/*1.5*/
+transform: scale(.82);
+}
+63.24% {right: 65.3vw;
+
+  top: 14.7vh;/*2*/
+  transform: scale(.81);
+}
+65.28%{right: 62.2vw;
+  top: 13.8vh;/*1.8*/
+  transform: scale(.81);
+}
+67.32% {right: 59.3vw;
+  top: 13.1vh;/*1.6*/
+  transform: scale(.80);
+}
+69.36% {right: 56.4vw;
+top: 12.8vh;/*1.5*/
+transform: scale(.80);
+}
+71.4% {right: 53.8vw;
+top: 12.4vh;
+transform: scale(.80);
+}
+73.44%{right: 51.2vw;
+top: 12.2vh;
+transform: scale(.81);
+} 
+75.48% {right: 49vw;
+
+top: 12.1vh;
+transform: scale(.81);
+}
+77.52% {right: 46.7vw;
+top: 12vh;
+transform: scale(.82);
+}
+79.06% {right: 44.6vw;
+top: 11.8vh;
+transform: scale(.82);
+}
+
+81.1% {right: 42.5vw;
+top: 11.8vh;
+transform: scale(.83);
+}
+83.14% {right: 40.4vw;
+top: 11.8vh;
+transform: scale(.83);
+}
+85.18% {right: 38.3vw;
+top: 11.8vh;
+transform: scale(.82);
+}
+87.22% {right: 36vw;
+top: 12vh;
+transform: scale(.82);
+}
+89.26% {right: 33.8vw;
+
+top: 12.1vh;
+transform: scale(.81);
+}
+91.3%{right: 31.2vw;
+top: 12.2vh;
+transform: scale(.81);
+} 
+93.34% {right: 28.6vw;
+top: 12.4vh;
+transform: scale(.80);
+z-index:3;
+}
+95.38% {right: 25.7vw;
+top: 12.8vh;/*1.5*/
+transform: scale(.80);
+}
+97.02% {right: 22.8vw;
+top: 13.1vh;/*1.6*/
+transform: scale(.80);
+}
+/*100%{right: 19.7vw;
+top: 3.8vh;
+transform: scale(.81);
+}*/
+100% {right: 17vw;
+
+  top: 14.7vh;/*2*/
+  transform: scale(.81);
+  }
+
+}
+
+@keyframes slideLeft2{
+   /*right up*/
+   65.28% {right: 42.5vw;
+    top: 29.3vh;
+    transform: scale(1);
+    z-index: 10;
+}
+67.32% {right: 45.5vw;
+  top: 29.3vh;
+  transform: scale(1);
+}
+69.36% {right: 48.7vw;
+top: 29.1vh;
+transform: scale(.99);
+}
+71.4% {right: 51.8vw;
+top: 28.9vh;
+transform: scale(.99);
+}
+73.44% {right: 55.1vw;
+top: 28.6vh;
+transform: scale(.98);
+}
+75.48% {right: 58.4vw;
+
+  top: 28.1vh;
+  transform: scale(.98);
+}
+77.52%{right: 61.8vw;
+  top: 27.4vh;
+  transform: scale(.97);
+}
+79.56% {right: 65.1vw;
+  top: 26.7vh;
+  transform: scale(.96);
+}
+81.6% {right: 68.1vw;
+top: 25.5vh;
+transform: scale(.94);
+}
+
+   83.64% {right: 70.6vw;
+  top: 24.1vh;
+  transform: scale(.9);
+  }
+
+  85.68% {right: 72.1vw;
+    top: 22.4vh;
+    transform: scale(.86);
+  /*  background-color: aquamarine;*/
+}
+
+87.72% {right: 72.3vw;
+  top:20.7vh;
+  transform: scale(.84);
+  z-index:3;
+}
+89.76% {right: 71.7vw;
+top: 18.9vh;/*2.6*/
+transform: scale(.83);
+}
+91.8% {right: 70.2vw;
+top:17.3vh ;/*1.9*/
+transform: scale(.82);
+}
+93.5% {right: 68vw;
+top: 15.9vh;/*1.5*/
+transform: scale(.82);
+}
+95% {right: 65.3vw;
+
+  top: 14.7vh;/*2*/
+  transform: scale(.81);
+}
+96.5%{right: 62.2vw;
+  top: 13.8vh;/*1.8*/
+  transform: scale(.81);
+}
+98% {right: 59.3vw;
+  top: 13.1vh;/*1.6*/
+  transform: scale(.80);
+}
+100% {right: 56.4vw;
+  top: 12.8vh;/*1.5*/
+  transform: scale(.80);
+  }
+0% {right: 56.4vw;
+top: 12.8vh;/*1.5*/
+transform: scale(.80);
+}
+2.04% {right: 53.8vw;
+top: 12.4vh;
+transform: scale(.80);
+}
+4.08%{right: 51.2vw;
+top: 12.2vh;
+transform: scale(.81);
+} 
+6.12% {right: 49vw;
+
+top: 12.1vh;
+transform: scale(.81);
+}
+8.16% {right: 46.7vw;
+top: 12vh;
+transform: scale(.82);
+}
+10.2% {right: 44.6vw;
+top: 11.8vh;
+transform: scale(.82);
+}
+
+12.24% {right: 42.5vw;
+top: 11.8vh;
+transform: scale(.83);
+}
+14.28% {right: 40.4vw;
+top: 11.8vh;
+transform: scale(.83);
+}
+16.32% {right: 38.3vw;
+top: 11.8vh;
+transform: scale(.82);
+}
+18.36% {right: 36vw;
+top: 12vh;
+transform: scale(.82);
+}
+20.4% {right: 33.8vw;
+
+top: 12.1vh;
+transform: scale(.81);
+}
+22.44%{right: 31.2vw;
+top: 12.2vh;
+transform: scale(.81);
+} 
+26.52% {right: 28.6vw;
+top: 12.4vh;
+transform: scale(.80);
+z-index:3;
+}
+28.56% {right: 25.7vw;
+top: 12.8vh;/*1.5*/
+transform: scale(.80);
+}
+30.6% {right: 22.8vw;
+top: 13.1vh;/*1.6*/
+transform: scale(.80);
+}
+32.64%{right: 19.7vw;
+top: 13.8vh;/*1.8*/
+transform: scale(.81);
+}
+34.68% {right: 17vw;
+
+top: 14.7vh;/*2*/
+transform: scale(.81);
+}
+36.72% {right: 14.8vw;
+top: 15.9vh;/*1.5*/
+transform: scale(.82);
+}
+38.76% {right: 13.3vw;
+top:17.3vh ;/*1.9*/
+transform: scale(.82);
+}
+40.8% {right: 12.7vw;
+top: 18.9vh;/*2.6*/
+transform: scale(.83);
+}
+42.84% {right: 12.9vw;
+top:20.7vh;
+transform: scale(.84);
+z-index:10;
+}
+44.88% {right: 14.4vw;
+top: 22.4vh;
+transform: scale(.86);
+/* background-color: aquamarine;*/
+}
+
+46.92% {right: 16.9vw;
+top: 24.1vh;
+transform: scale(.9);
+}
+48.96% {right: 19.9vw;
+  top: 25.5vh;
+  transform: scale(.94);
+}
+51% {right: 23.2vw;
+  top: 26.7vh;
+  transform: scale(.96);
+}
+53.04%{right: 26.6vw;
+top: 27.4vh;
+transform: scale(.97);
+}
+55.08% {right: 29.9vw;
+
+top: 28.1vh;
+transform: scale(.98);
+}
+57.12% {right: 33.2vw;
+top: 28.6vh;
+transform: scale(.98);
+}
+59.16% {right: 36.3vw;
+top: 28.9vh;
+transform: scale(.99);
+}
+61.2% {right: 39.5vw;
+top: 29.1vh;
+transform: scale(.99);
+}
+63.24% {right: 41.5vw;
+top: 29.3vh;
+transform: scale(1);
+}
+/*65.28% {right: 42.5vw;
+top: 19.3vh;
+transform: scale(1);
+}*/
+
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .move1{
+  
+    /*position data*/
+    height: 25vh;
+    
+  } 
+    
+    .move1 div:first-child{
+      /*the look*/
+     bottom: 50vh;
+      padding: 20px;
+      font-size: 1.8vw;
+    }
+    .move2{
+    /*position data*/
+    height: 25vh;
+    }
+       
+       .move2 div:first-child{
+      /*the look*/
+      padding: 20px;
+      font-size: 1.6vw;
+    }
+    
+    .move3{
+      
+      /*position data*/
+    height: 25vh;
+    
+    }
+    .move3 div:first-child{
+       /*the look*/
+       padding: 20px;
+      font-size: 1.6vw;
+    }
+    
+
+}
+
+@media only screen and (max-width: 375px) {
+
+  .move1{
+  
+    /*position data*/
+    height: 25vh;
+    
+  } 
+    
+    .move1 div:first-child{
+      /*the look*/
+     bottom: 50vh;
+      padding: 10px;
+      font-size: 1.8vw;
+    }
+    .move2{
+    /*position data*/
+    height: 25vh;
+    }
+       
+       .move2 div:first-child{
+      /*the look*/
+      padding: 10px;
+      font-size: 1.6vw;
+    }
+    
+    .move3{
+      
+      /*position data*/
+    height: 25vh;
+    
+    }
+    .move3 div:first-child{
+       /*the look*/
+       padding: 10px;
+      font-size: 1.6vw;
+    }
+    
+
+}

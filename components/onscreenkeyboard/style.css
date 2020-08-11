@@ -1,0 +1,56 @@
+/*css data*/
+body{
+    background-color: rgb(255, 0, 0);
+}
+.key{position: absolute;
+    color: #bdbdbd;
+    /*background: #bababa;*/
+    text-shadow: #e0e0e0 1px 1px 0;
+    margin:0px;
+   /* padding: 3px;*/
+    /*float: left;*/
+    font-size: larger;
+   
+    border-top: rgb(200,200,200) solid 1px;
+    border-left: rgb(200,200,200) solid 1px;
+    border-bottom: rgb(80,80,80) solid 1px;
+    border-right: rgb(80,80,80) solid 1px;
+    border-radius: 5px;
+   width: 7.4vw;
+    height:9.5vh;
+    text-align: center;
+    box-shadow: 2px 2px rgb(70,70,70);
+    /*background-color: rgb(85, 85, 85);*/
+    background-image: linear-gradient(to bottom right, rgb(189, 189, 189) , rgb(94, 94, 94));
+   /* color: white;*/
+}
+#keyboardDisplay{
+    width: 80vw;
+margin: 5px;
+padding: 2px;
+background-image: linear-gradient(to bottom right, rgb(189, 189, 189) , rgb(94, 94, 94));
+
+border-radius: 10px;
+border-top: rgb(200,200,200) solid 3px;
+    border-left: rgb(200,200,200) solid 3px;
+    border-bottom: rgb(80,80,80) solid 3px;
+    border-right: rgb(80,80,80) solid 3px;
+    text-align: center;
+      outline: 1px inset rgb(146, 146, 146);
+    outline-offset: -15px;
+}
+#oSKeyboard{
+    height: 30vh;
+    width: 80vw;
+    /*z-index: -3;*/
+    border-top: rgb(200,200,200) solid 3px;
+    border-left: rgb(200,200,200) solid 3px;
+    border-bottom: rgb(80,80,80) solid 3px;
+    border-right: rgb(80,80,80) solid 3px;
+
+   /* border: 3px solid rgb(197, 197, 197);*/
+    border-radius: 8px;
+    /*background-color: rgb(185, 185, 185);*/
+    background-image: linear-gradient(to bottom right, rgb(189, 189, 189) , rgb(94, 94, 94));
+   box-shadow: 1 1 3px;
+}
