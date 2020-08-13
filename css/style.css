@@ -7,11 +7,19 @@ body{
     background-repeat:no-repeat; */
     }
 
+    p{
+font-size: 2vw;;    
+    }
+    h3{
+        font-size: 1.3vw;
+    }
+
 a{
+    font-size: 1.3vw;
     text-decoration:none;
     color:rgb(150, 205, 236)
 }
-
+button{font-size: 0.7vw;}
     .centralMain{
         font-family: Arial, Helvetica, sans-serif;
         width: 80vw;height:80vh;
